@@ -41,7 +41,7 @@ function App() {
 
   useEffect(() => {
     const getProbability = async () => {
-      const api = "https://api.open-meteo.com/v1/forecast?latitude=59.33&longitude=18.07&daily=weathercode,precipitation_probability_max&timezone=Europe%2FBerlin";
+      const api = "https://api.open-meteo.com/v1/forecast?latitude=59.33&longitude=18.07&daily=precipitation_probability_max&timezone=Europe%2FBerlin";
       const data = await fetch(api);
       const obj = await data.json();
       const percentage = obj.daily.precipitation_probability_max[0];
